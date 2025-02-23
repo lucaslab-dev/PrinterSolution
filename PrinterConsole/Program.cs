@@ -23,8 +23,7 @@ var host = Host.CreateDefaultBuilder(args)
       services.AddMassTransit(x =>
       {
         x.AddConsumer<PrintJobConsumer>();
-
-        x.UsingRabbitMq((context, cfg) =>
+        x.UsingRabbitMq((busRegistrationContext, cfg) =>
           {
             cfg.Host(rabbitMqConfig.Host, rabbitMqConfig.VirtualHost, h =>
             {
@@ -35,12 +34,12 @@ var host = Host.CreateDefaultBuilder(args)
             var storeIdentifier = storeSettings["Identifier"];
             cfg.ReceiveEndpoint($"print-job-queue-{storeIdentifier}", e =>
             {
-              e.Bind("PrintJobMessage.Direct", x =>
+              e.Bind(MessageBrokerQueues.PrintJobMessage, x =>
               {
                 x.RoutingKey = storeIdentifier;
                 x.ExchangeType = RabbitMQ.Client.ExchangeType.Direct;
               });
-              e.ConfigureConsumer<PrintJobConsumer>(context);
+              e.ConfigureConsumer<PrintJobConsumer>(busRegistrationContext);
             });
           });
       });

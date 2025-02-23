@@ -15,5 +15,5 @@ public class NetworkPrinterWrapper(string hostnameOrIp, int port, string printer
 			PrinterName = printerName
 		});
 
-	public Task Print(byte[] data) => _printer.WriteAsync(data);
+	public Task PrintAsync(byte[] data) => _printer.WriteAsync(data);
 }

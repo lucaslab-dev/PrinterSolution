@@ -4,7 +4,7 @@ namespace PrinterConsole.Factory;
 
 public class LinePrinterWrapper(string printerName) : IPrinter
 {
-	public Task Print(byte[] data)
+	public Task PrintAsync(byte[] data)
 	{
 		var isRunningOnWindows = Environment.OSVersion.Platform == PlatformID.Win32NT;
 		var startInfo = new ProcessStartInfo

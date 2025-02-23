@@ -1,20 +1,22 @@
 using MassTransit;
+
 using Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.Configure<MessageBrokerSettings>(builder.Configuration.GetSection("RabbitMq"));
 builder.Services.AddMassTransit(x =>
 {
-    x.UsingRabbitMq((context, cfg) =>
+    x.UsingRabbitMq((_, cfg) =>
     {
-        var rabbitMqConfig = builder.Configuration.GetSection("RabbitMQ");
-        cfg.Host(rabbitMqConfig["Host"], rabbitMqConfig["VirtualHost"], h =>
+        var rabbitMqConfig = builder.Configuration.GetSection("RabbitMq").Get<MessageBrokerSettings>()!;
+        cfg.Host(rabbitMqConfig.Host, rabbitMqConfig.VirtualHost, h =>
         {
-            h.Username(rabbitMqConfig["Username"]);
-            h.Password(rabbitMqConfig["Password"]);
+            h.Username(rabbitMqConfig.Username!);
+            h.Password(rabbitMqConfig.Password!);
         });
 
-        cfg.Message<PrintJobMessage>(x => x.SetEntityName("PrintJobMessage.Direct"));
+        cfg.Message<PrintJobMessage>(x => x.SetEntityName(MessageBrokerQueues.PrintJobMessage));
         cfg.Publish<PrintJobMessage>(x =>
         {
             x.ExchangeType = RabbitMQ.Client.ExchangeType.Direct;

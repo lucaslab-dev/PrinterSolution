@@ -2,5 +2,5 @@ namespace PrinterConsole.Factory;
 
 public interface IPrinter
 {
-	Task Print(byte[] data);
+	Task PrintAsync(byte[] data);
 }

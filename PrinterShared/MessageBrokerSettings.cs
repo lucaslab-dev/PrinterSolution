@@ -1,4 +1,4 @@
-namespace PrinterConsole.Settings;
+namespace Shared;
 
 public class MessageBrokerSettings
 {
