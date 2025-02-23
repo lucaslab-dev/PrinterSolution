@@ -1,0 +1,11 @@
+/Users/lucassilva/Desktop/Printer/PrinterShared/bin/Debug/net8.0/PrinterShared.deps.json
+/Users/lucassilva/Desktop/Printer/PrinterShared/bin/Debug/net8.0/PrinterShared.dll
+/Users/lucassilva/Desktop/Printer/PrinterShared/bin/Debug/net8.0/PrinterShared.pdb
+/Users/lucassilva/Desktop/Printer/PrinterShared/obj/Debug/net8.0/PrinterShared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lucassilva/Desktop/Printer/PrinterShared/obj/Debug/net8.0/PrinterShared.AssemblyInfoInputs.cache
+/Users/lucassilva/Desktop/Printer/PrinterShared/obj/Debug/net8.0/PrinterShared.AssemblyInfo.cs
+/Users/lucassilva/Desktop/Printer/PrinterShared/obj/Debug/net8.0/PrinterShared.csproj.CoreCompileInputs.cache
+/Users/lucassilva/Desktop/Printer/PrinterShared/obj/Debug/net8.0/PrinterShared.dll
+/Users/lucassilva/Desktop/Printer/PrinterShared/obj/Debug/net8.0/refint/PrinterShared.dll
+/Users/lucassilva/Desktop/Printer/PrinterShared/obj/Debug/net8.0/PrinterShared.pdb
+/Users/lucassilva/Desktop/Printer/PrinterShared/obj/Debug/net8.0/ref/PrinterShared.dll

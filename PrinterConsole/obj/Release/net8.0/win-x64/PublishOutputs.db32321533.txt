@@ -1,0 +1,4 @@
+/Users/lucassilva/Projects/Backups/MealExpress/Printer/PrinterConsole.pdb
+/Users/lucassilva/Projects/Backups/MealExpress/Printer/appsettings.json
+/Users/lucassilva/Projects/Backups/MealExpress/Printer/PrinterShared.pdb
+/Users/lucassilva/Projects/Backups/MealExpress/Printer/PrinterConsole.exe

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f76eaf87-3edc-4c1a-a797-8cae63a040f7" name="Backup" url="http://localhost">
+        <fileTransfer mountedRoot="$USER_HOME$/Projects/Backups/MealExpress" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
