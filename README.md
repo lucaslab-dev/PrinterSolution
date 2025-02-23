@@ -65,6 +65,17 @@ The following tools were used in this project:
 - [Docker](https://www.docker.com/) (for RabbitMQ container)
 - [Swagger/OpenAPI](https://swagger.io/)
 
+## :computer: Architecture
+
+The architecture of the PrinterSolution system consists of the following components:
+
+- **Web API**: The Web API is responsible for receiving print requests through a REST API endpoint. It sends the print commands to the message queue using RabbitMQ.
+- **Console Printer App**: The Console Printer App is responsible for processing print commands received from the message queue. It simulates a remote printer by printing the received messages.
+
+The communication between the Web API and the Console Printer App is facilitated by RabbitMQ, a message broker. The Web API sends print commands to the message queue, and the Console Printer App consumes the messages from the queue.
+
+<img src="./.github/architecture.png" alt="Architecture Diagram" />
+
 ## :white_check_mark: Requirements
 
 Before starting :checkered_flag:, you need to have the following installed:
